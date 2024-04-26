@@ -1,3 +1,3 @@
 - .. make apptitle a state variable
-	- .. make apptitle a state variable
+	- x make apptitle a state variable
 - on about page: make button to change app title

@@ -1,7 +1,8 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 interface IAppContext {
 	appTitle: string;
+	handleChangeAppTitle: () => void;
 }
 
 interface IAppProvider {
@@ -9,15 +10,20 @@ interface IAppProvider {
 }
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
-const _appTitle = 'Showcase for React useContext';
+const _appTitle = "Showcase for React useContext";
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [appTitle, setAppTitle] = useState(_appTitle);
 
-		return (
+	const handleChangeAppTitle = () => {
+		console.log("CHANGING APPTITLE");
+	};
+
+	return (
 		<AppContext.Provider
 			value={{
-				appTitle
+				appTitle,
+				handleChangeAppTitle
 			}}
 		>
 			{children}
