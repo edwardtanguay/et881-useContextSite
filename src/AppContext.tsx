@@ -6,7 +6,7 @@ interface IAppContext {
 	appTitle: string;
 	handleChangeAppTitle: () => void;
 	skills: ISkill[];
-	handleDeleteSkill: () => void;
+	handleDeleteSkill: (skill: ISkill) => void;
 }
 
 interface IAppProvider {
@@ -34,9 +34,9 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		setAppTitle(appTitle + ">");
 	};
 
-	const handleDeleteSkill = () => {
-		console.log('deleting skill');
-	} 
+	const handleDeleteSkill = (skill: ISkill) => {
+		console.log(`deleting skill named "${skill.name}"`);
+	};
 
 	return (
 		<AppContext.Provider
@@ -44,7 +44,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 				appTitle,
 				handleChangeAppTitle,
 				skills,
-				handleDeleteSkill
+				handleDeleteSkill,
 			}}
 		>
 			{children}
