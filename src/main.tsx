@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 import "./index.scss";
 import { PageWelcome } from "./pages/PageWelcome.tsx";
-import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
+import { PageSkills } from "./pages/PageSkills.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
 				element: <PageWelcome />,
 			},
 			{
-				path: "info",
-				element: <PageInfo />,
+				path: "skills",
+				element: <PageSkills />,
 			},
 			{
 				path: "about",
