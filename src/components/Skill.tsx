@@ -14,6 +14,6 @@ export const Skill = ({ skill }: IProps) => {
 		<div className="text-xl text-orange-400 flex justify-between">{skill.name}
 		<FaRegTrashCan onClick={() => handleDeleteSkill(skill)} className="text-red-500 mt-2 text-[1rem] cursor-pointer" />
 		</div>
-		<div className="text-slate-300 italic">{skill.description}</div>
+		<div className="text-slate-300 italic">{skill.cleanDescription}</div>
 	</div>;
 };

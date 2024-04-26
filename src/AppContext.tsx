@@ -2,6 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { ISkill } from "./types";
+import * as tools from './tools';
 
 interface IAppContext {
 	appTitle: string;
@@ -34,7 +35,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 					description: rawSkill.description,
 					idCode: rawSkill.idCode,
 					url: rawSkill.url,
-					cleanDescription: 'nnn'
+					cleanDescription: tools.sentencize(rawSkill.description)
 				}
 				_skills.push(_skill);
 			}
