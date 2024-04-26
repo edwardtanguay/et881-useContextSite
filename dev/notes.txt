@@ -14,6 +14,6 @@
 - x show skills info first page	
 - x on about page, show "our next skill will be number 315"
 - .. on skills page, for each skill a delete button
-	- .. get trashcan icon from React Icons
-	- appContext: make handleDeleteSkill
+	- x get trashcan icon from React Icons
+	- .. appContext: make handleDeleteSkill
 	- Employee: use handleDeleteSkill

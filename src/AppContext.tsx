@@ -6,6 +6,7 @@ interface IAppContext {
 	appTitle: string;
 	handleChangeAppTitle: () => void;
 	skills: ISkill[];
+	handleDeleteSkill: () => void;
 }
 
 interface IAppProvider {
@@ -13,9 +14,9 @@ interface IAppProvider {
 }
 
 const skillsUrl = "https://edwardtanguay.vercel.app/share/skills.json";
+const _appTitle = "Showcase for React useContext";
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
-const _appTitle = "Showcase for React useContext";
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [appTitle, setAppTitle] = useState(_appTitle);
@@ -33,12 +34,17 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		setAppTitle(appTitle + ">");
 	};
 
+	const handleDeleteSkill = () => {
+		console.log('deleting skill');
+	} 
+
 	return (
 		<AppContext.Provider
 			value={{
 				appTitle,
 				handleChangeAppTitle,
 				skills,
+				handleDeleteSkill
 			}}
 		>
 			{children}
