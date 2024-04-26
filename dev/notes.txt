@@ -9,5 +9,5 @@
 	- x make available in context
 	- .. display on skills page
 	 	- .. use map to show all in flex wrap
-			- .. pass skill to Skill component
+			- x pass skill to Skill component
 		- .. make component for Skill

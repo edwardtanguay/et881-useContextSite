@@ -7,8 +7,8 @@ export const PageSkills = () => {
 
 	return (
 		<>
-			<p>There are {skills.length} skills.</p>
-			<section>
+			<p className="mb-3 text-xl">There are {skills.length} skills.</p>
+			<section className="flex flex-wrap gap-3">
 				{skills.map((skill) => {
 					return <Skill skill={skill} />;
 				})}
