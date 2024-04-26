@@ -25,7 +25,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		(async () => {
 			const response = await axios.get(skillsUrl);
 			const _skills = response.data;
-			console.log(_skills);
+			setSkills(_skills);
 		})();
 	}, []);
 
