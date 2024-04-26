@@ -12,4 +12,8 @@
 			- x pass skill to Skill component
 		- x make component for Skill
 - x show skills info first page	
-- .. on about page, show "our next skill will be number 315"
+- x on about page, show "our next skill will be number 315"
+- .. on skills page, for each skill a delete button
+	- .. get trashcan icon from React Icons
+	- appContext: make handleDeleteSkill
+	- Employee: use handleDeleteSkill
