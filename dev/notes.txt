@@ -2,8 +2,8 @@
 	- x make apptitle a state variable
 - x on about page: make button to change app title
 - .. add skills
-	- .. change info page to Skills
-	- display "There are 0 skills"
+	- x change info page to Skills
+	- .. display "There are 0 skills"
 	- in AppContext: skills.json via axios holen
 	- save in state variable
 	- make available in context
