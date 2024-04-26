@@ -13,7 +13,9 @@
 		- x make component for Skill
 - x show skills info first page	
 - x on about page, show "our next skill will be number 315"
-- .. on skills page, for each skill a delete button
+- x on skills page, for each skill a delete button
 	- x get trashcan icon from React Icons
-	- .. appContext: make handleDeleteSkill
-	- Employee: use handleDeleteSkill
+	- x appContext: make handleDeleteSkill
+	- x Employee: use handleDeleteSkill
+- .. create new field cleanDescription
+	- after import, loop through all skills, create clean description

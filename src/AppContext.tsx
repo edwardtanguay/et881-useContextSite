@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { ISkill } from "./types";
@@ -25,7 +26,18 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	useEffect(() => {
 		(async () => {
 			const response = await axios.get(skillsUrl);
-			const _skills = response.data;
+			const rawSkills:any[] = response.data;
+			const _skills: ISkill[] = [];
+			for (const rawSkill of rawSkills) {
+				const _skill: ISkill = {
+					name: rawSkill.name,
+					description: rawSkill.description,
+					idCode: rawSkill.idCode,
+					url: rawSkill.url,
+					cleanDescription: 'nnn'
+				}
+				_skills.push(_skill);
+			}
 			setSkills(_skills);
 		})();
 	}, []);
