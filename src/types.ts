@@ -1,4 +1,4 @@
-export type Skill = {
+export interface ISkill {
 	idCode: string;
 	name: string;
 	url: string;

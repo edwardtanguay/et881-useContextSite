@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { Skill } from "./types";
 import axios from "axios";
+import { ISkill } from "./types";
 
 interface IAppContext {
 	appTitle: string;
 	handleChangeAppTitle: () => void;
-	skills: Skill[];
+	skills: ISkill[];
 }
 
 interface IAppProvider {
@@ -19,7 +19,7 @@ const _appTitle = "Showcase for React useContext";
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [appTitle, setAppTitle] = useState(_appTitle);
-	const [skills, setSkills] = useState<Skill[]>([]);
+	const [skills, setSkills] = useState<ISkill[]>([]);
 
 	useEffect(() => {
 		(async () => {

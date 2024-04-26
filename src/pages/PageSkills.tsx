@@ -10,7 +10,7 @@ export const PageSkills = () => {
 			<p>There are {skills.length} skills.</p>
 			<section>
 				{skills.map((skill) => {
-					return <Skill />;
+					return <Skill skill={skill} />;
 				})}
 			</section>
 		</>
