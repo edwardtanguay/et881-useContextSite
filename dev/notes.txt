@@ -1,13 +1,15 @@
 - x make apptitle a state variable
 	- x make apptitle a state variable
 - x on about page: make button to change app title
-- .. add skills
+- x add skills
 	- x change info page to Skills
 	- x display "There are 0 skills"
 	- x in AppContext: skills.json via axios holen
 	- x save in state variable
 	- x make available in context
-	- .. display on skills page
-	 	- .. use map to show all in flex wrap
+	- x display on skills page
+	 	- x use map to show all in flex wrap
 			- x pass skill to Skill component
-		- .. make component for Skill
+		- x make component for Skill
+- x show skills info first page	
+- .. on about page, show "our next skill will be number 315"
