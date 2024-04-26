@@ -35,7 +35,8 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	};
 
 	const handleDeleteSkill = (skill: ISkill) => {
-		console.log(`deleting skill named "${skill.name}"`);
+		const _skills = skills.filter(m => m.idCode !== skill.idCode);
+		setSkills(structuredClone(_skills));
 	};
 
 	return (
