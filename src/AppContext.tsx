@@ -16,7 +16,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [appTitle, setAppTitle] = useState(_appTitle);
 
 	const handleChangeAppTitle = () => {
-		console.log("CHANGING APPTITLE");
+		setAppTitle(appTitle + '>');
 	};
 
 	return (
