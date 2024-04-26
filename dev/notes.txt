@@ -4,7 +4,9 @@
 - .. add skills
 	- x change info page to Skills
 	- x display "There are 0 skills"
-	- .. in AppContext: skills.json via axios holen
-	- save in state variable
-	- make available in context
-	- display on skills page
+	- x in AppContext: skills.json via axios holen
+	- x save in state variable
+	- x make available in context
+	- .. display on skills page
+	 	- .. use map to show all in flex wrap
+		- .. make component for Skill
