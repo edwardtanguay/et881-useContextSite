@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import { ISkill } from "../types";
+import { Skill } from "../types";
 import { FaRegTrashCan } from "react-icons/fa6";
 
-interface IProps {
-	skill: ISkill;
+type Props = {
+	skill: Skill;
 }
 
-export const Skill = ({ skill }: IProps) => {
+export const SingleSkill = ({ skill }: Props) => {
 	const {handleDeleteSkill} = useContext(AppContext);
 
 	return <div className="bg-slate-600 w-[20rem] p-3 rounded">

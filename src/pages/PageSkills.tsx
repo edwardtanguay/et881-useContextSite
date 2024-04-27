@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import { Skill } from "../components/Skill";
+import { SingleSkill } from "../components/SingleSkill";
 
 export const PageSkills = () => {
 	const { skills } = useContext(AppContext);
@@ -10,7 +10,7 @@ export const PageSkills = () => {
 			<p className="mb-3 text-xl">There are {skills.length} skills.</p>
 			<section className="flex flex-wrap gap-3">
 				{skills.map(skill => {
-					return <Skill skill={skill} key={skill.idCode} />;
+					return <SingleSkill skill={skill} key={skill.idCode} />;
 				})}
 			</section>
 		</>
