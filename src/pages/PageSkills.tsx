@@ -9,8 +9,8 @@ export const PageSkills = () => {
 		<>
 			<p className="mb-3 text-xl">There are {skills.length} skills.</p>
 			<section className="flex flex-wrap gap-3">
-				{skills.map((skill,index) => {
-					return <Skill skill={skill} key={index} />;
+				{skills.map(skill => {
+					return <Skill skill={skill} key={skill.idCode} />;
 				})}
 			</section>
 		</>
